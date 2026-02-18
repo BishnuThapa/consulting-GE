@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'accounts',
     'slider',
+    'settings',
 ]
 
 AUTH_USER_MODEL = 'accounts.Account'
