@@ -43,8 +43,10 @@ INSTALLED_APPS = [
     'faq',
     'inquiry',
     'page',
-    'slider',
+    'seo',
     'settings',
+    'slider',
+
 ]
 
 AUTH_USER_MODEL = 'accounts.Account'
