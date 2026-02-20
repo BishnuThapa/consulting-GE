@@ -32,6 +32,7 @@ INSTALLED_APPS = [
 
     'aboutus',
     'accounts',
+    'core',
     'faq',
     'inquiry',
     'page',
