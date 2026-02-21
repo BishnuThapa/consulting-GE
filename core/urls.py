@@ -15,6 +15,6 @@ urlpatterns = [
     # path('services/<slug:slug>/', service_detail, name='service-detail'),
     # path('company/<slug:slug>/', howwedo_detail, name='howwedo-detail'),
     # path('<slug:slug>/', page, name="page-detail"),
-    # path('contact-us', views.contact, name='contact'),
+    path('contact-us', views.contact, name='contact'),
     # Add other URL patterns here
 ]
