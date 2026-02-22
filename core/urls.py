@@ -1,12 +1,11 @@
 from django.urls import path
 from . import views
 from services.views import service, service_detail
-from aboutus.views import about, chairmanmessage, vision, goal, whyus, profile, certification
-
+from aboutus.views import about, chairmanmessage, whyus
 
 urlpatterns = [
     path('', views.index, name='index'),
-    # path('about-us/', about, name='about'),
+    path('about-us/', about, name='about'),
     # path('vision-mission/', vision, name='vision'),
     # path('md-message/', chairmanmessage, name='md-message'),
     # path('certification/', certification, name='certification'),

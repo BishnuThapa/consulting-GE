@@ -100,7 +100,7 @@
                 <img
                   src="{% static 'assets/img/citizenship/timer-black.html' %}"
                   alt=""
-                />Monday - Friday 09:00 am - 05:00 Pm
+                />Sunday - Friday 09:00 AM - 05:00 PM
               </div>
             </div>
           </div>
@@ -111,7 +111,7 @@
               <div class="header__logo">
                 <a href="index.html"
                   ><img
-                    src="{% static 'assets/img/citizenship/logo.html' %}"
+                    src="{% static 'assets/img/logo/logo.svg' %}"
                     alt=""
                 /></a>
               </div>
@@ -120,6 +120,10 @@
                   <ul>
                     <li class=" active">
                       <a href="/"><span>Home</span></a>
+                      
+                    </li>
+                    <li class=" active">
+                      <a href="{% url 'about'%}"><span>About us</span></a>
                       
                     </li>
                     <li class="menu-item-has-children">
@@ -167,9 +171,7 @@
                         </li>
                       </ul>
                     </li>
-                    <li>
-                      <a href="about.html"><span>About us</span></a>
-                    </li>
+                    
                     <li class="menu-item-has-children">
                       <a href="#!"><span>Country</span></a>
                       <ul class="submenu">
@@ -210,45 +212,7 @@
                 </div>
               </div>
               <ul class="header__action ul_li">
-                <li>
-                  <a
-                    class="header__search header-search-btn"
-                    href="javascript:void(0);"
-                  >
-                    <img
-                      src="{% static 'assets/img/citizenship/cr-search-status.html' %}"
-                      alt=""
-                    />Search
-                  </a>
-                </li>
-                <li>
-                  <div class="header__language">
-                    <ul>
-                      <li>
-                        <a href="#!" class="lang-btn">
-                          <div class="flag">
-                            <img
-                              src="{% static 'assets/img/icon/us_flag.png' %}"
-                              alt=""
-                            />
-                          </div>
-                          English
-                          <div class="arrow_down">
-                            <img
-                              src="{% static 'assets/img/citizenship/cr-arrow-right.html' %}"
-                              alt=""
-                            />
-                          </div>
-                        </a>
-                        <ul class="lang_sub_list">
-                          <li><a href="#">English</a></li>
-                          <li><a href="#">Arabic</a></li>
-                          <li><a href="#">Bangla</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
+                
               </ul>
             </div>
           </div>
@@ -258,7 +222,7 @@
             <div class="xb-header-menu-scroll">
               <div class="xb-menu-close xb-hide-xl xb-close"></div>
               <div class="xb-logo-mobile xb-hide-xl">
-                <a href="index.html" rel="home"
+                <a href="/" rel="home"
                   ><img
                     src="{% static 'assets/img/citizenship/logo.html' %}"
                     alt=""

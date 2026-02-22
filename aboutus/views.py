@@ -21,24 +21,6 @@ def chairmanmessage(request):
     }
     return render(request, 'md-message.html', context)
 
-def vision(request):
-
-    vision = Vision.objects.first()
-    context = {
-        'vision': vision,
-
-    }
-    return render(request, 'vision.html', context)
-
-
-def goal(request):
-
-    goal = Goals.objects.first()
-    context = {
-        'goal': goal,
-
-    }
-    return render(request, 'goal.html', context)
 
 
 def whyus(request):
@@ -51,20 +33,3 @@ def whyus(request):
     return render(request, 'why-us.html', context)
 
 
-def profile(request):
-
-    profile = CompanyProfile.objects.first()
-    context = {
-        'profile': profile,
-
-    }
-    return render(request, 'company-profile.html', context)
-
-def certification(request):
-
-    certifications = LegalDocument.objects.all()
-    context = {
-        'certifications': certifications,
-
-    }
-    return render(request, 'certification.html', context)
