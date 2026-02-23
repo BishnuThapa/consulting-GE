@@ -109,7 +109,7 @@
           <div class="container">
             <div class="header__inner ul_li_between">
               <div class="header__logo">
-                <a href="index.html"
+                <a href="/"
                   ><img
                     src="{% static 'assets/img/logo/logo.svg' %}"
                     alt=""
@@ -185,18 +185,9 @@
                         </li>
                       </ul>
                     </li>
-                    <li class="menu-item-has-children">
-                      <a href="#!"><span>Blog</span></a>
-                      <ul class="submenu">
-                        <li>
-                          <a href="blog.html"><span>Blog</span></a>
-                        </li>
-                        <li>
-                          <a href="blog-single.html"
-                            ><span>Blog Details</span></a
-                          >
-                        </li>
-                      </ul>
+                    <li class="">
+                      <a href="{% url 'blog'%}"><span>Blog</span></a>
+                      
                     </li>
                     <li>
                       <a href="{% url 'contact'%}"><span>Contact</span></a>

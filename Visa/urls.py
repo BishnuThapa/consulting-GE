@@ -10,6 +10,8 @@ urlpatterns = [
     path("ckeditor5/", include('django_ckeditor_5.urls')),
 
     path('', include('core.urls')),
+    path('blog/', include('blog.urls')),
+
 
 ]
 if settings.DEBUG == True:
