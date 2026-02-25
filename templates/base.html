@@ -126,52 +126,7 @@
                       <a href="{% url 'about'%}"><span>About us</span></a>
                       
                     </li>
-                    <li class="menu-item-has-children">
-                      <a href="#!"><span>Pages</span></a>
-                      <ul class="submenu">
-                        <li>
-                          <a href="services.html"><span>Services</span></a>
-                        </li>
-                        <li>
-                          <a href="service-single.html"
-                            ><span>Service Details</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="coaching.html"><span>Coaching</span></a>
-                        </li>
-                        <li>
-                          <a href="coaching-single.html"
-                            ><span>Coaching Details</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="visa.html"><span>Visa</span></a>
-                        </li>
-                        <li>
-                          <a href="visa-single.html"
-                            ><span>Visa Details</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="team.html"><span>Team</span></a>
-                        </li>
-                        <li>
-                          <a href="team-single.html"
-                            ><span>Team Details</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="testimonial.html"
-                            ><span>Testimonials</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="faq.html"><span>FAQ</span></a>
-                        </li>
-                      </ul>
-                    </li>
-                    
+                   
                     <li class="menu-item-has-children">
                       <a href="#!"><span>Country</span></a>
                       <ul class="submenu">
@@ -186,7 +141,7 @@
                       </ul>
                     </li>
                     <li class="">
-                      <a href="{% url 'blog'%}"><span>Blog</span></a>
+                      <a href="{% url 'blog' %}"><span>Blog</span></a>
                       
                     </li>
                     <li>
@@ -407,7 +362,7 @@
           </div>
           <div class="footer__copyright ul_li_between">
             <div class="footer__copyright-text mt-15">
-              Copyright © 2025 <a href="index.html">e.visa</a> All rights
+              Copyright © {% now 'Y' %} <a href="#">GreenEarth Education Consultancy</a> All rights
               reserved.
             </div>
             <ul class="footer__social ul_li_right mt-15">
