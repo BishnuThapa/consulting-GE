@@ -5,15 +5,15 @@
   <!-- hero start -->
   <section
     class="hero hero__style-one citizenship-hero bg_img pos-rel"
-    data-background="assets/img/citizenship/cr-hero_bg.html"
+    data-background="{{ slider.image.url }}"
   >
     <div class="container">
       <div class="row">
         <div class="col-lg-11">
           <div class="hero__content">
             <h1 class="wow skewIn">
-              Global Leader in Fast
-              <span>Citizenship and Residency</span> Programs
+              {{ slider.title}}
+              
             </h1>
             <div
               class="hero__bottom wow fadeInUp"
@@ -21,13 +21,11 @@
               data-wow-duration=".8s"
             >
               <p>
-                We provide fast, tailored solutions for Citizenship and
-                Residency with seeking enhanced mobility and global
-                opportunities and seamless results.
+                {{ slider.sub_title}}
               </p>
-              <a class="thm-btn thm-btn--cr-btn" href="contact.html"
+              <a class="thm-btn thm-btn--cr-btn" href="{% url 'contact' %}"
                 >Get a Free Consultation
-                <span><i class="fal fa-long-arrow-right"></i></span
+                <span><i class="fa-solid fa-arrow-right"></i></span
               ></a>
             </div>
           </div>

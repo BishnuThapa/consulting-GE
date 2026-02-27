@@ -11,31 +11,58 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="description" content="Greenearth Education Consultancy in Kathmandu, Nepal offers expert study abroad guidance, university admissions support, scholarships & career counselling to help students achieve international education goals.">
+    <meta
+      name="description"
+      content="Greenearth Education Consultancy in Kathmandu, Nepal offers expert study abroad guidance, university admissions support, scholarships & career counselling to help students achieve international education goals."
+    />
 
-    <meta name="keywords" content="Education consultancy Kathmandu, Study abroad Nepal, University admissions support, Scholarship guidance, Career counselling Nepal, Greenearth Education Consultancy">
-    <meta property="og:title" content="Greenearth Education Consultancy in Kathmandu, Nepal | Study Abroad Experts">
-    <meta property="og:description" content="Get professional study abroad counselling, admissions support and scholarship guidance at Greenearth Education Consultancy, Kathmandu, Nepal.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://greenearth.edu.np/">
-    <meta property="og:image" content="https://greenearth.edu.np/your-preview-image.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Greenearth Education Consultancy – Kathmandu, Nepal">
-    <meta name="twitter:description" content="Expert study abroad guidance, admissions support and career counselling from Greenearth Education Consultancy, Kathmandu.">
-    <meta name="twitter:image" content="https://greenearth.edu.np/your-preview-image.jpg">
+    <meta
+      name="keywords"
+      content="Education consultancy Kathmandu, Study abroad Nepal, University admissions support, Scholarship guidance, Career counselling Nepal, Greenearth Education Consultancy"
+    />
+    <meta
+      property="og:title"
+      content="Greenearth Education Consultancy in Kathmandu, Nepal | Study Abroad Experts"
+    />
+    <meta
+      property="og:description"
+      content="Get professional study abroad counselling, admissions support and scholarship guidance at Greenearth Education Consultancy, Kathmandu, Nepal."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://greenearth.edu.np/" />
+    <meta
+      property="og:image"
+      content="https://greenearth.edu.np/your-preview-image.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Greenearth Education Consultancy – Kathmandu, Nepal"
+    />
+    <meta
+      name="twitter:description"
+      content="Expert study abroad guidance, admissions support and career counselling from Greenearth Education Consultancy, Kathmandu."
+    />
+    <meta
+      name="twitter:image"
+      content="https://greenearth.edu.np/your-preview-image.jpg"
+    />
     <title>
-        {% block title %}
-        Greenearth Education Consultancy in Kathmandu, Nepal | Study Abroad & Career Guidance
-        {% endblock title %}
+      {% block title %} Greenearth Education Consultancy in Kathmandu, Nepal |
+      Study Abroad & Career Guidance {% endblock title %}
     </title>
-  
-  
+
     <link
       rel="shortcut icon"
       href="assets/img/favicon.png"
       type="images/x-icon"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- css include -->
     <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}" />
@@ -55,11 +82,10 @@
     <!-- backtotop - start -->
     <div class="xb-backtotop style-3">
       <a href="#" class="scroll">
-        <i class="far fa-arrow-up"></i>
+        <i class="fa-solid fa-arrow-up"></i>
       </a>
     </div>
     <!-- backtotop - end -->
-
 
     <!-- preloader start -->
     <div id="xb-loadding">
@@ -86,23 +112,17 @@
             <div class="header__top ul_li_between">
               <ul class="header__top-cta ul_li list-unstyled">
                 <li>
-                  <img
-                    src="{% static 'assets/img/citizenship/call-icon.html' %}"
-                    alt=""
-                  /><span>Call us:</span> +91 590 088 55
+                  <i class="fa-solid fa-phone"></i> <span>Call us:</span>
+                  {{ company_info.phone }} | {{ company_info.mobile }}
                 </li>
                 <li>
-                  <img
-                    src="{% static 'assets/img/citizenship/message-notif.html' %}"
-                    alt=""
-                  /><span>Mail us:</span> contact@evisa.com
+                  <i class="fa-solid fa-envelope"></i> <span>Mail:</span> 
+                  {{ company_info.email }}
                 </li>
               </ul>
               <div class="header__top-info ul_li">
-                <img
-                  src="{% static 'assets/img/citizenship/timer-black.html' %}"
-                  alt=""
-                />Sunday - Friday 09:00 AM - 05:00 PM
+                <i class="fa-solid fa-clock"></i>&nbsp; Sunday - Friday 09:00 AM
+                - 05:00 PM
               </div>
             </div>
           </div>
@@ -113,22 +133,21 @@
               <div class="header__logo">
                 <a href="/"
                   ><img
-                    src="{% static 'assets/img/logo/logo.svg' %}"
-                    alt=""
+                    src="{{ logo.logo.url }}"
+                    alt="{{ logo.title }}"
+                    width="150"
                 /></a>
               </div>
               <div class="main-menu__wrap ul_li navbar navbar-expand-lg">
                 <nav class="main-menu collapse navbar-collapse">
                   <ul>
-                    <li class=" active">
+                    <li class="active">
                       <a href="/"><span>Home</span></a>
-                      
                     </li>
-                    <li class=" active">
+                    <li class="active">
                       <a href="{% url 'about'%}"><span>About us</span></a>
-                      
                     </li>
-                   
+
                     <li class="menu-item-has-children">
                       <a href="#!"><span>Country</span></a>
                       <ul class="submenu">
@@ -144,7 +163,6 @@
                     </li>
                     <li class="">
                       <a href="{% url 'blog' %}"><span>Blog</span></a>
-                      
                     </li>
                     <li>
                       <a href="{% url 'contact'%}"><span>Contact</span></a>
@@ -155,13 +173,11 @@
               <div class="xb-hamburger-menu">
                 <div class="xb-nav-mobile">
                   <div class="xb-nav-mobile-button">
-                    <i class="fal fa-bars"></i>
+                    <i class="fa-solid fa-bars"></i>
                   </div>
                 </div>
               </div>
-              <ul class="header__action ul_li">
-                
-              </ul>
+              <ul class="header__action ul_li"></ul>
             </div>
           </div>
         </div>
@@ -364,35 +380,50 @@
           </div>
           <div class="footer__copyright ul_li_between">
             <div class="footer__copyright-text mt-15">
-              Copyright © {% now 'Y' %} <a href="#">GreenEarth Education Consultancy</a> All rights
+              Copyright © {% now 'Y' %}
+              <a href="#">GreenEarth Education Consultancy</a> All rights
               reserved.
             </div>
             <ul class="footer__social ul_li_right mt-15">
               <li class="follow-text">Follow us :</li>
+
+              {% if social_links.facebook_link %}
               <li>
-                <a href="#!"
-                  ><svg
-                    width="13"
-                    height="13"
-                    viewBox="0 0 13 13"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M10.2373 0H12.2316L7.87571 5.50625L13 13H8.9887L5.84463 8.45625L2.25141 13H0.254237L4.91243 7.10938L0 0H4.11299L6.95198 4.15312L10.2373 0ZM9.53672 11.6812H10.6412L3.5113 1.25H2.32486L9.53672 11.6812Z"
-                      fill="white"
-                    /></svg
-                ></a>
+                <a href="{{ social_links.facebook_link }}" target="_blank">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
               </li>
+              {% endif %} {% if social_links.instagram_link %}
               <li>
-                <a href="#!"><i class="fab fa-facebook-f"></i></a>
+                <a href="{{ social_links.instagram_link }}" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
               </li>
+              {% endif %} {% if social_links.youtube_link %}
               <li>
-                <a href="#!"><i class="fab fa-linkedin-in"></i></a>
+                <a href="{{ social_links.youtube_link }}" target="_blank">
+                  <i class="fab fa-youtube"></i>
+                </a>
               </li>
+              {% endif %} {% if social_links.tiktok_link %}
               <li>
-                <a href="#!"><i class="fab fa-youtube"></i></a>
+                <a href="{{ social_links.tiktok_link }}" target="_blank">
+                  <i class="fab fa-tiktok"></i>
+                </a>
               </li>
+              {% endif %} {% if social_links.twitter_link %}
+              <li>
+                <a href="{{ social_links.twitter_link }}" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              {% endif %} {% if social_links.linkedin_link %}
+              <li>
+                <a href="{{ social_links.linkedin_link }}" target="_blank">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+              {% endif %}
             </ul>
           </div>
         </div>

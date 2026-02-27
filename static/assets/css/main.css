@@ -8093,7 +8093,7 @@ a.ui-button:active, .ui-button:active,
   opacity: 0;
   visibility: hidden; }
   .xb-backtotop.active {
-    bottom: 40px;
+    bottom: 90px;
     opacity: 1;
     visibility: visible; }
   .xb-backtotop .scroll {

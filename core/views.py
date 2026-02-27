@@ -1,11 +1,16 @@
 from django.shortcuts import render
 from aboutus.models import *
+from slider.models import *
 from django.http import HttpResponse
 # Create your views here.
 
 
 def index(request):
-    return render(request, 'index.html')
+    slider=Slider.objects.first()
+    context={
+        'slider': slider,
+    }
+    return render(request, 'index.html',context)
 
 def contact(request):
     return render(request, 'contact.html')
