@@ -11,18 +11,13 @@
       <div class="row">
         <div class="col-lg-11">
           <div class="hero__content">
-            <h1 class="wow skewIn">
-              {{ slider.title}}
-              
-            </h1>
+            <h1 class="wow skewIn">{{ slider.title}}</h1>
             <div
               class="hero__bottom wow fadeInUp"
               data-wow-delay="200ms"
               data-wow-duration=".8s"
             >
-              <p>
-                {{ slider.sub_title}}
-              </p>
+              <p>{{ slider.sub_title}}</p>
               <a class="thm-btn thm-btn--cr-btn" href="{% url 'contact' %}"
                 >Get a Free Consultation
                 <span><i class="fa-solid fa-arrow-right"></i></span
@@ -60,7 +55,78 @@
     </div>
   </section>
   <!-- hero end -->
-
+  <!-- about start -->
+  <section class="about pos-rel pt-120 pb-125">
+    <div class="container">
+      <div class="about-top">
+        <div class="row mt-none-30">
+          <div class="col-lg-5 mt-30">
+            <div class="sec-title style-4">
+              <span
+                class="sub_title wow fadeInLeft"
+                data-wow-delay="0ms"
+                data-wow-duration=".8s"
+                >{{ about.heading}}
+                </span>
+              <h1
+                class="title wow skewIn"
+                data-wow-delay="0ms"
+                data-wow-duration=".8s"
+              >
+                {{ about.sub_heading}}
+              </h1>
+            </div>
+          </div>
+          <div class="col-lg-7 mt-30">
+            <div
+              class="about-top_right wow fadeInRight"
+              data-wow-delay="0ms"
+              data-wow-duration=".8s"
+            >
+              <p>
+                {{ about.description | safe | truncatewords:60 }}
+              </p>
+              <span><a href="{% url 'about' %}" class="btn-sm">Read More</a></span>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-bottom mt-60">
+        <div class="row mt-none-30">
+          <div class="col-lg-6 mt-30">
+            <div
+              class="xb-about-item wow fadeInUp"
+              data-wow-delay="150ms"
+              data-wow-duration=".8s"
+            >
+              <div class="xb-item--inner">
+                <div class="xb-item--img">
+                  <img src="{{ about.featured_image.url }}" alt="" />
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mt-30">
+            <div
+              class="xb-about-item wow fadeInUp"
+              data-wow-delay="300ms"
+              data-wow-duration=".8s"
+            >
+              <div class="xb-item--inner">
+                <div class="xb-item--img">
+                  <img src="{{ about.students_image.url }}" alt="" />
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- about end -->
   <!-- feature start -->
   <section class="feature pt-130 pb-75" data-bg-color="#f5fbff">
     <div class="container">

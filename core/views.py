@@ -7,8 +7,10 @@ from django.http import HttpResponse
 
 def index(request):
     slider=Slider.objects.first()
+    about=About.objects.first()
     context={
         'slider': slider,
+        'about': about,
     }
     return render(request, 'index.html',context)
 

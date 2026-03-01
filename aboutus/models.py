@@ -25,6 +25,8 @@ class About(models.Model):
     sub_heading = models.CharField(max_length=255)
     featured_image = models.ImageField(
         upload_to='about', blank=True, null=True, default='')
+    students_image = models.ImageField(
+        upload_to='about', blank=True, null=True, default='')
     description = CKEditor5Field(config_name='extends')
 
     def __str__(self):
