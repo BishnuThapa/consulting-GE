@@ -6,7 +6,6 @@ from django_ckeditor_5.fields import CKEditor5Field
 
 class Client(models.Model):
     title = models.CharField(max_length=255)
-    slug = models.SlugField(max_length=255, unique=True, null=True, blank=True)
     image = models.ImageField(upload_to='recruitment')
     is_active = models.BooleanField(default=True)
     description = CKEditor5Field(config_name='extends')

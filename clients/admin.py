@@ -9,9 +9,6 @@ class ClientAdmin(admin.ModelAdmin):
     list_display = ('title', 'thumbnail', 
                     'is_active', 'created_at', 'updated_at')
     list_editable = ('is_active', )
-    prepopulated_fields = {
-        'slug': ['title', ]
-    }
 
     def thumbnail(self, obj):
         if obj.image:
