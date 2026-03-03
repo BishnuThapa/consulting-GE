@@ -6,8 +6,10 @@ from .models import *
 def about(request):
 
     about = About.objects.first()
+    whyus = WhyUs.objects.first()
     context = {
         'about': about,
+        'whyus': whyus,
 
     }
     return render(request, 'about.html', context)

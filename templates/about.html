@@ -51,15 +51,13 @@ About us | Greenearth Education Consultancy
         <div class="col-lg-5 offset-lg-1">
           <div class="sec-title mb-20">
             <p>
-              We deliver budget-friendly visa solutions, removing financial
-              barriers from your journey. Our goal is to provide quality
-              services at reasonable rates.
+              At Greenearth Education Consultancy, we offer cost-effective visa and admission support designed to make studying abroad accessible for everyone. Quality service and honest pricing are at the heart of what we do.
             </p>
           </div>
         </div>
       </div>
       <div class="xb-about__img">
-        <img src="assets/img/about/about_img3.html" alt="" />
+        <img src="{{ about.featured_image.url }}" alt="" />
       </div>
     </div>
   </section>
@@ -73,7 +71,7 @@ About us | Greenearth Education Consultancy
           <div class="xb-fanfact xb-fanfact1">
             <div class="xb-item--inner">
               <h2 class="xb-item--number">
-                <span class="xbo" data-count="30">00</span
+                <span class="xbo" data-count="3">00</span
                 ><span class="suffix">K</span>
               </h2>
               <span class="xb-item--dots"
@@ -81,7 +79,7 @@ About us | Greenearth Education Consultancy
               ></span>
               <h5 class="xb-item--title">
                 We Have Worked <br />
-                With Clients
+                With Students
               </h5>
             </div>
           </div>
@@ -107,7 +105,7 @@ About us | Greenearth Education Consultancy
           <div class="xb-fanfact xb-fanfact1">
             <div class="xb-item--inner">
               <h2 class="xb-item--number">
-                <span class="xbo" data-count="1">00</span
+                <span class="xbo" data-count="7">00</span
                 ><span class="suffix">DAY</span>
               </h2>
               <span class="xb-item--dots"
@@ -135,7 +133,7 @@ About us | Greenearth Education Consultancy
               class="inner-img d-inline-block wow skewIn"
               data-wow-delay="200ms"
             >
-              <img src="assets/img/bg/mission.html" alt="" />
+              <img src="{{ about.students_image.url }}" alt="" />
             </div>
           </div>
         </div>
@@ -143,14 +141,11 @@ About us | Greenearth Education Consultancy
           <div class="mission__content">
             <div class="sec-title">
               <h2 class="mb-20 wow skewIn">
-                Guiding Your Path with Our <br />
-                <span>Immigration Mission</span>
+                {{ about.sub_heading}} <br />
+                
               </h2>
               <p>
-                We're here to simplify immigration complexities, guiding you to
-                success. Our mission is to unite families, open opportunities,
-                and make your journey enriching. Your dreams are our focus on
-                the path to a brighter future.
+                {{ about.description | safe }}
               </p>
             </div>
           </div>
@@ -160,7 +155,7 @@ About us | Greenearth Education Consultancy
         <div class="col-lg-6 mt-30">
           <div class="mission__img">
             <div class="inner-img d-inline-block wow skewIn">
-              <img src="assets/img/bg/vission.html" alt="" />
+              <img src="{{ whyus.featured_image.url }}" alt="" />
             </div>
           </div>
         </div>
@@ -168,14 +163,11 @@ About us | Greenearth Education Consultancy
           <div class="mission__content">
             <div class="sec-title">
               <h2 class="mb-20 wow skewIn" data-wow-delay="200ms">
-                Our Immigration <br />
-                <span>Service history</span>
+                {{ whyus.heading }} <br />
+                <span>{{ whyus.experience }} Years of Experience</span>
               </h2>
               <p>
-                Our history began with a vision to make the immigration process
-                smoother and more accessible for individuals and families around
-                the world. With a deep understanding of the challenges that
-                accompany moving to a new country,
+                {{ whyus.description | safe }}
               </p>
             </div>
           </div>
@@ -185,290 +177,7 @@ About us | Greenearth Education Consultancy
   </section>
   <!-- mission end -->
 
-  <!-- team start -->
-  <section
-    class="team pt-120 pb-130 bg_img"
-    data-background="assets/img/bg/team_bg.html"
-  >
-    <div class="container">
-      <div class="sec-title text-center mb-65">
-        <h2 class="mb-40 wow skewIn">
-          Our trusted immigration <br />
-          <span> support team</span>
-        </h2>
-        <p>
-          At the heart of our commitment to providing exceptional <br />
-          immigration solutions stands
-        </p>
-      </div>
-      <div class="row mt-none-30">
-        <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
-          <div class="xb-team text-center">
-            <div class="xb-item--inner" data-parallax='{"scale" : 1}'>
-              <div class="xb-item--img">
-                <img src="assets/img/team/img_01.png" alt="" />
-              </div>
-              <div class="xb-item--holder">
-                <h3 class="xb-item--name">
-                  <a href="team-single.html">Esther Howard</a>
-                </h3>
-                <span class="xb-item--designation">Legal Advisor</span>
-              </div>
-              <ul class="xb-item--social list-unstyled">
-                <li>
-                  <a href="#!"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li>
-                  <a href="#!"><i class="fab fa-linkedin-in"></i></a>
-                </li>
-                <li>
-                  <a href="#!"><i class="fab fa-facebook-f"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
-          <div class="xb-team text-center">
-            <div class="xb-item--inner">
-              <div class="xb-item--img">
-                <img src="assets/img/team/img_02.png" alt="" />
-              </div>
-              <div class="xb-item--holder">
-                <h3 class="xb-item--name">
-                  <a href="team-single.html">Annette Black</a>
-                </h3>
-                <span class="xb-item--designation">Education Counsellor</span>
-              </div>
-              <ul class="xb-item--social list-unstyled">
-                <li>
-                  <a href="#!"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li>
-                  <a href="#!"><i class="fab fa-linkedin-in"></i></a>
-                </li>
-                <li>
-                  <a href="#!"><i class="fab fa-facebook-f"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
-          <div class="xb-team text-center">
-            <div class="xb-item--inner">
-              <div class="xb-item--img">
-                <img src="assets/img/team/img_03.png" alt="" />
-              </div>
-              <div class="xb-item--holder">
-                <h3 class="xb-item--name">
-                  <a href="team-single.html">Andrew Riis</a>
-                </h3>
-                <span class="xb-item--designation">Visa Specialist</span>
-              </div>
-              <ul class="xb-item--social list-unstyled">
-                <li>
-                  <a href="#!"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li>
-                  <a href="#!"><i class="fab fa-linkedin-in"></i></a>
-                </li>
-                <li>
-                  <a href="#!"><i class="fab fa-facebook-f"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
-          <div class="xb-team text-center">
-            <div class="xb-item--inner">
-              <div class="xb-item--img">
-                <img src="assets/img/team/img_04.png" alt="" />
-              </div>
-              <div class="xb-item--holder">
-                <h3 class="xb-item--name">
-                  <a href="team-single.html">Kristin Watson</a>
-                </h3>
-                <span class="xb-item--designation">Visa Coordinator</span>
-              </div>
-              <ul class="xb-item--social list-unstyled">
-                <li>
-                  <a href="#!"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li>
-                  <a href="#!"><i class="fab fa-linkedin-in"></i></a>
-                </li>
-                <li>
-                  <a href="#!"><i class="fab fa-facebook-f"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
-          <div class="xb-team text-center">
-            <div class="xb-item--inner">
-              <div class="xb-item--img">
-                <img src="assets/img/team/img_05.png" alt="" />
-              </div>
-              <div class="xb-item--holder">
-                <h3 class="xb-item--name">
-                  <a href="team-single.html">Jerome Bell</a>
-                </h3>
-                <span class="xb-item--designation">General Manager</span>
-              </div>
-              <ul class="xb-item--social list-unstyled">
-                <li>
-                  <a href="#!"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li>
-                  <a href="#!"><i class="fab fa-linkedin-in"></i></a>
-                </li>
-                <li>
-                  <a href="#!"><i class="fab fa-facebook-f"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
-          <div class="xb-team text-center">
-            <div class="xb-item--inner">
-              <div class="xb-item--img">
-                <img src="assets/img/team/img_06.png" alt="" />
-              </div>
-              <div class="xb-item--holder">
-                <h3 class="xb-item--name">
-                  <a href="team-single.html">Eleanor Pena</a>
-                </h3>
-                <span class="xb-item--designation">Case Manager</span>
-              </div>
-              <ul class="xb-item--social list-unstyled">
-                <li>
-                  <a href="#!"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li>
-                  <a href="#!"><i class="fab fa-linkedin-in"></i></a>
-                </li>
-                <li>
-                  <a href="#!"><i class="fab fa-facebook-f"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
-          <div class="xb-team text-center">
-            <div class="xb-item--inner">
-              <div class="xb-item--img">
-                <img src="assets/img/team/img_07.html" alt="" />
-              </div>
-              <div class="xb-item--holder">
-                <h3 class="xb-item--name">
-                  <a href="team-single.html">Steve Trister</a>
-                </h3>
-                <span class="xb-item--designation">Visa Coordinator</span>
-              </div>
-              <ul class="xb-item--social list-unstyled">
-                <li>
-                  <a href="#!"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li>
-                  <a href="#!"><i class="fab fa-linkedin-in"></i></a>
-                </li>
-                <li>
-                  <a href="#!"><i class="fab fa-facebook-f"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
-          <div class="xb-team text-center">
-            <div class="xb-item--inner">
-              <div class="xb-item--img">
-                <img src="assets/img/team/img_08.html" alt="" />
-              </div>
-              <div class="xb-item--holder">
-                <h3 class="xb-item--name">
-                  <a href="team-single.html">Daniel Lewis</a>
-                </h3>
-                <span class="xb-item--designation">Case Manager</span>
-              </div>
-              <ul class="xb-item--social list-unstyled">
-                <li>
-                  <a href="#!"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li>
-                  <a href="#!"><i class="fab fa-linkedin-in"></i></a>
-                </li>
-                <li>
-                  <a href="#!"><i class="fab fa-facebook-f"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- team end -->
 
-  <!-- brand start -->
-  <section class="brand pt-130 pb-100">
-    <div class="container">
-      <h2 class="brand-title text-center mb-50">
-        <span
-          ><span>We're proud to work with our preferred partners</span></span
-        >
-      </h2>
-      <div class="xb-swiper-sliders brand-slider">
-        <div class="xb-carousel-inner">
-          <div class="xb-swiper-container swiper-container">
-            <div class="xb-swiper-wrapper swiper-wrapper">
-              <div class="swiper-slide xb-swiper-slide">
-                <a href="#!"
-                  ><img src="assets/img/brand/img_01.png" alt=""
-                /></a>
-              </div>
-              <div class="swiper-slide xb-swiper-slide">
-                <a href="#!"
-                  ><img src="assets/img/brand/img_02.png" alt=""
-                /></a>
-              </div>
-              <div class="swiper-slide xb-swiper-slide">
-                <a href="#!"
-                  ><img src="assets/img/brand/img_03.png" alt=""
-                /></a>
-              </div>
-              <div class="swiper-slide xb-swiper-slide">
-                <a href="#!"
-                  ><img src="assets/img/brand/img_04.png" alt=""
-                /></a>
-              </div>
-              <div class="swiper-slide xb-swiper-slide">
-                <a href="#!"
-                  ><img src="assets/img/brand/img_05.png" alt=""
-                /></a>
-              </div>
-              <div class="swiper-slide xb-swiper-slide">
-                <a href="#!"
-                  ><img src="assets/img/brand/img_06.png" alt=""
-                /></a>
-              </div>
-              <div class="swiper-slide xb-swiper-slide">
-                <a href="#!"
-                  ><img src="assets/img/brand/img_07.png" alt=""
-                /></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- brand end -->
 
  
 </main>
