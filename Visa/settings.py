@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'blog',
     'clients',
     'core',
+    'destination',
     'faq',
     'inquiry',
     'page',
