@@ -55,7 +55,39 @@
     </div>
   </section>
   <!-- hero end -->
-   
+  <!-- feature start -->
+  <section class="feature border-bottom">
+    <div class="container">
+      <div class="xb-feature xb-feature1 ul_li_between">
+        <div class="xb-item--inner ul_li">
+          <div class="xb-item--icon">
+            <i class="fa-brands fa-cc-visa"></i>
+          </div>
+          <h3 class="xb-item--title">Visa Process, no Interviews</h3>
+        </div>
+        <div class="xb-item--inner ul_li">
+          <div class="xb-item--icon">
+            <i class="fa-solid fa-list-ol"></i>
+          </div>
+          <h3 class="xb-item--title">Faster Processing</h3>
+        </div>
+        <div class="xb-item--inner ul_li">
+          <div class="xb-item--icon">
+            <i class="fa-brands fa-readme"></i>
+          </div>
+          <h3 class="xb-item--title">Up-to-Date Information</h3>
+        </div>
+        <div class="xb-item--inner ul_li">
+          <div class="xb-item--icon">
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+          </div>
+          <h3 class="xb-item--title">Reasonable Cost</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- feature end -->
+
   <!-- about start -->
   <section class="about pos-rel pt-120 pb-125">
     <div class="container">
@@ -68,7 +100,7 @@
                 data-wow-delay="0ms"
                 data-wow-duration=".8s"
                 >{{ about.heading}}
-                </span>
+              </span>
               <h1
                 class="title wow skewIn"
                 data-wow-delay="0ms"
@@ -84,11 +116,10 @@
               data-wow-delay="0ms"
               data-wow-duration=".8s"
             >
-              <p>
-                {{ about.description | safe | truncatewords:60 }}
-              </p>
-              <span><a href="{% url 'about' %}" class="btn-sm">Read More</a></span>
-              
+              <p>{{ about.description | safe | truncatewords:60 }}</p>
+              <span
+                ><a href="{% url 'about' %}" class="btn-sm">Read More</a></span
+              >
             </div>
           </div>
         </div>
@@ -105,7 +136,6 @@
                 <div class="xb-item--img">
                   <img src="{{ about.featured_image.url }}" alt="" />
                 </div>
-                
               </div>
             </div>
           </div>
@@ -119,7 +149,6 @@
                 <div class="xb-item--img">
                   <img src="{{ about.students_image.url }}" alt="" />
                 </div>
-                
               </div>
             </div>
           </div>
@@ -128,160 +157,7 @@
     </div>
   </section>
   <!-- about end -->
-  <!-- feature start -->
-  <section class="feature pt-130 pb-75" data-bg-color="#f5fbff">
-    <div class="container">
-      <div class="sec-title style-2 style-3 text-center mb-40">
-        <span class="sec-title--sub"
-          ><img
-            src="{% static 'assets/img/icon/h_star.html' %}"
-            alt="" />Benefits<img
-            src="{% static 'assets/img/icon/h_star.html' %}"
-            alt=""
-        /></span>
-        <h3
-          class="sec-title--heading wow fadeInUp"
-          data-wow-delay="0ms"
-          data-wow-duration=".6s"
-        >
-          Benefits of Citizenship
-        </h3>
-      </div>
-      <div class="cr-feture ul_li_between">
-        <div class="cr-feature-wrap">
-          <div class="cr-feature-item">
-            <div class="xb-item--inner">
-              <div class="xb-item--icon">
-                <img
-                  src="{% static 'assets/img/citizenship/cr-feature_icon01.html' %}"
-                  alt=""
-                />
-              </div>
-              <div class="xb-item--holder">
-                <h2 class="xb-item--title">Tax Incentives</h2>
-                <p class="xb-item--content">
-                  Receive tax benefits & exemptions <br />
-                  of off-shore companies.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="cr-feature-item">
-            <div class="xb-item--inner">
-              <div class="xb-item--icon">
-                <img
-                  src="{% static 'assets/img/citizenship/cr-feature_icon02.html' %}"
-                  alt=""
-                />
-              </div>
-              <div class="xb-item--holder">
-                <h2 class="xb-item--title">Education & Healthcare</h2>
-                <p class="xb-item--content">
-                  Access high-quality healthcare & education systems on a global
-                  scale.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="cr-feature-wrap">
-          <div class="cr-feature-item">
-            <div class="xb-item--inner">
-              <div class="xb-item--icon">
-                <img
-                  src="{% static 'assets/img/citizenship/cr-feature_icon03.html' %}"
-                  alt=""
-                />
-              </div>
-              <div class="xb-item--holder">
-                <h2 class="xb-item--title">CBI is Lifetime</h2>
-                <p class="xb-item--content">
-                  Secure lifetime citizenship as a <br />
-                  valuable asset your future.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="cr-feature-item">
-            <div class="xb-item--inner">
-              <div class="xb-item--icon">
-                <img
-                  src="{% static 'assets/img/citizenship/cr-feature_icon04.html' %}"
-                  alt=""
-                />
-              </div>
-              <div class="xb-item--holder">
-                <h2 class="xb-item--title">Business Opportunities</h2>
-                <p class="xb-item--content">
-                  Expand globally and access new markets — a game-changer.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="cr-feature-wrap">
-          <div class="cr-feature-item">
-            <div class="xb-item--inner">
-              <div class="xb-item--icon">
-                <img
-                  src="{% static 'assets/img/citizenship/cr-feature_icon05.html' %}"
-                  alt=""
-                />
-              </div>
-              <div class="xb-item--holder">
-                <h2 class="xb-item--title">Visa-Free Travel</h2>
-                <p class="xb-item--content">
-                  A second passport boosts global mobility for easier travel.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="cr-feature-item">
-            <div class="xb-item--inner">
-              <div class="xb-item--icon">
-                <img
-                  src="{% static 'assets/img/citizenship/cr-feature_icon06.html' %}"
-                  alt=""
-                />
-              </div>
-              <div class="xb-item--holder">
-                <h2 class="xb-item--title">Live, work and study</h2>
-                <p class="xb-item--content">
-                  Golden visas offer residency <br />
-                  through a qualifying investment.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="cr-feature-bottom">
-        <div class="xb-item--img wow skewIn" data-wow-duration="1s">
-          <img
-            src="{% static 'assets/img/citizenship/cr-feature-img.html' %}"
-            alt=""
-          />
-        </div>
-        <div class="cr-feature-bottom_content ul_li_between align-items-start">
-          <div class="feature_list ul_li">
-            <ul class="list-unstyled">
-              <li><i class="far fa-check"></i> Seamless Booking Experience.</li>
-              <li><i class="far fa-check"></i> Affordable Travel Packages.</li>
-            </ul>
-            <ul class="list-unstyled">
-              <li><i class="far fa-check"></i> Travel Assistance Services.</li>
-              <li><i class="far fa-check"></i> Global Connectivity.</li>
-            </ul>
-          </div>
-          <a class="thm-btn thm-btn--cr-btn" href="contact.html"
-            >Get a Free Consultation
-            <span><i class="fal fa-long-arrow-right"></i></span
-          ></a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- feature end -->
+  
 
   <!-- program start -->
   <section class="program pt-130 pb-130" data-bg-color="#00003c">
@@ -1815,6 +1691,61 @@
     </div>
   </section>
   <!-- cta end -->
+
+  <!-- brand start -->
+  <section class="brand pt-110 pb-90">
+    <div class="container">
+      <h2 class="brand-title text-center mb-50">
+        <span
+          ><span>We're proud to work with our preferred partners</span></span
+        >
+      </h2>
+      <div class="xb-swiper-sliders brand-slider">
+        <div class="xb-carousel-inner">
+          <div class="xb-swiper-container swiper-container">
+            <div class="xb-swiper-wrapper swiper-wrapper">
+              <div class="swiper-slide xb-swiper-slide">
+                <a href="#!"
+                  ><img src="assets/img/brand/img_01.png" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide xb-swiper-slide">
+                <a href="#!"
+                  ><img src="assets/img/brand/img_02.png" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide xb-swiper-slide">
+                <a href="#!"
+                  ><img src="assets/img/brand/img_03.png" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide xb-swiper-slide">
+                <a href="#!"
+                  ><img src="assets/img/brand/img_04.png" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide xb-swiper-slide">
+                <a href="#!"
+                  ><img src="assets/img/brand/img_05.png" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide xb-swiper-slide">
+                <a href="#!"
+                  ><img src="assets/img/brand/img_06.png" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide xb-swiper-slide">
+                <a href="#!"
+                  ><img src="assets/img/brand/img_07.png" alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- brand end -->
 </main>
 
 {% endblock content %}
