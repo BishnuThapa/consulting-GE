@@ -21,14 +21,6 @@ class SeoInline(admin.TabularInline):
     # def has_add_permission(self, request, obj=None):
     #     return False
 
-
-@admin.register(Category)
-class CategoryAdmin(admin.ModelAdmin):
-    list_display = ['title', 'slug', 'created_at', 'updated_at']
-    prepopulated_fields = {
-        'slug': ['title', ]
-    }
-   
 @admin.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
     list_display = ['title',

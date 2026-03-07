@@ -6,8 +6,8 @@ from page.views import page
 
 
 urlpatterns = [
-    path('blog/', include('blog.urls')),
     path('', views.index, name='index'),
+    path('blog/', include('blog.urls')),
     path('about-us/', about, name='about'),
     # path('vision-mission/', vision, name='vision'),
     path('director-message/', chairmanmessage, name='md-message'),

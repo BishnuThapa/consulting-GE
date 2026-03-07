@@ -7,25 +7,10 @@ from imagekit.models import ImageSpecField
 from imagekit.processors import ResizeToFit, Convert
 # from filer.fields.image import FilerImageField
 
-class Category(models.Model):
-    title = models.CharField(max_length=255)
-    slug = models.SlugField(max_length=255, unique=True, null=True, blank=True)
-    description = CKEditor5Field(config_name='extends')
-    is_active = models.BooleanField(default=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
-    def __str__(self):
-        return self.title
-
-    class Meta:
-        verbose_name = 'Category'
-        verbose_name_plural = 'Categories'
-    
     
 
 class Blog(models.Model):
-    category = models.ForeignKey(Category, on_delete=models.CASCADE,null=True, blank=True)
+    
     title = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255, unique=True, null=True, blank=True)
     image = models.ImageField(upload_to='blog')
