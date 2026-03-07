@@ -36,162 +36,60 @@ Frequently Asked Questions |Greenearth Education Consultancy
   <!-- breadcrumb end -->
 
   <!-- faq start -->
-  <section class="faq pt-125" data-bg-color="#f5f5f5">
-    <div class="container">
+<section class="faq pt-125" data-bg-color="#f5f5f5">
+  <div class="container">
+    <div
+      class="sec-title style-4 text-center mb-60 wow fadeInUp"
+      data-wow-delay="0ms"
+      data-wow-duration=".8s"
+    >
+      <span class="sub_title">
+        <img src="{% static 'assets/img/work-visa/magic-icon02.html' %}" alt="" />
+        faq
+        <img src="{% static 'assets/img/work-visa/magic-icon.html' %}" alt="" />
+      </span>
+      <h1 class="title">Common questions answered</h1>
+    </div>
+
+    <div class="faq-wrap">
+      <ul class="accordion_box clearfix">
+
+        {% for faq in faqs %}
+        <li class="accordion block {% if forloop.first %}active-block{% endif %}">
+          
+          <div class="acc-btn">
+            {{ faq.question }}
+            <span class="arrow"></span>
+          </div>
+
+          <div class="acc_body {% if forloop.first %}current{% endif %}">
+            <div class="content">
+              <p>{{ faq.answer|linebreaks }}</p>
+            </div>
+          </div>
+
+        </li>
+        {% endfor %}
+
+      </ul>
+    </div>
+
+    <div class="faq-shape">
+      <img src="{% static 'assets/img/work-visa/faq-shape.html' %}" alt="" />
       <div
-        class="sec-title style-4 text-center mb-60 wow fadeInUp"
+        class="shape wow fadeInLeft"
         data-wow-delay="0ms"
         data-wow-duration=".8s"
       >
-        <span class="sub_title"
-          ><img src="assets/img/work-visa/magic-icon02.html" alt="" />faq<img
-            src="assets/img/work-visa/magic-icon.html"
-            alt=""
-        /></span>
-        <h1 class="title">Common questions answered</h1>
-      </div>
-      <div class="faq-wrap">
-        <ul class="accordion_box clearfix">
-          <li class="accordion block active-block">
-            <div class="acc-btn">
-              How Do I Apply For a Work Visa?
-              <span class="arrow"></span>
-            </div>
-            <div class="acc_body current">
-              <div class="content">
-                <p>
-                  To apply for a work visa, secure a job offer and submit
-                  required documents, such as proof of employment, <br />
-                  qualifications, and financial stability, to the immigration
-                  office. Requirements may vary by country.
-                </p>
-                <ul>
-                  <li><i class="far fa-check"></i>Secure a job offer</li>
-                  <li>
-                    <i class="far fa-check"></i>Prepare required documents,
-                  </li>
-                  <li><i class="far fa-check"></i>Submit your application</li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="accordion block">
-            <div class="acc-btn">
-              What Documents So I Need to Apply for A Work Visa?
-              <span class="arrow"></span>
-            </div>
-            <div class="acc_body">
-              <div class="content">
-                <p>
-                  To apply for a work visa, secure a job offer and submit
-                  required documents, such as proof of employment, <br />
-                  qualifications, and financial stability, to the immigration
-                  office. Requirements may vary by country.
-                </p>
-                <ul>
-                  <li>
-                    <i class="far fa-check"></i>Comprehensive Visa Assistance
-                  </li>
-                  <li><i class="far fa-check"></i>Visa Category Expertise</li>
-                  <li>
-                    <i class="far fa-check"></i>Transparency and Communication
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="accordion block">
-            <div class="acc-btn">
-              How Long Does it Take to Process a Work Visa?
-              <span class="arrow"></span>
-            </div>
-            <div class="acc_body">
-              <div class="content">
-                <p>
-                  To apply for a work visa, secure a job offer and submit
-                  required documents, such as proof of employment, <br />
-                  qualifications, and financial stability, to the immigration
-                  office. Requirements may vary by country.
-                </p>
-                <ul>
-                  <li>
-                    <i class="far fa-check"></i>Comprehensive Visa Assistance
-                  </li>
-                  <li><i class="far fa-check"></i>Visa Category Expertise</li>
-                  <li>
-                    <i class="far fa-check"></i>Transparency and Communication
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="accordion block">
-            <div class="acc-btn">
-              Can I Bring My Family With Me On a Work Visa?
-              <span class="arrow"></span>
-            </div>
-            <div class="acc_body">
-              <div class="content">
-                <p>
-                  To apply for a work visa, secure a job offer and submit
-                  required documents, such as proof of employment, <br />
-                  qualifications, and financial stability, to the immigration
-                  office. Requirements may vary by country.
-                </p>
-                <ul>
-                  <li>
-                    <i class="far fa-check"></i>Comprehensive Visa Assistance
-                  </li>
-                  <li><i class="far fa-check"></i>Visa Category Expertise</li>
-                  <li>
-                    <i class="far fa-check"></i>Transparency and Communication
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="accordion block">
-            <div class="acc-btn">
-              What Happens if My Work Visa is Denied?
-              <span class="arrow"></span>
-            </div>
-            <div class="acc_body">
-              <div class="content">
-                <p>
-                  To apply for a work visa, secure a job offer and submit
-                  required documents, such as proof of employment, <br />
-                  qualifications, and financial stability, to the immigration
-                  office. Requirements may vary by country.
-                </p>
-                <ul>
-                  <li>
-                    <i class="far fa-check"></i>Comprehensive Visa Assistance
-                  </li>
-                  <li><i class="far fa-check"></i>Visa Category Expertise</li>
-                  <li>
-                    <i class="far fa-check"></i>Transparency and Communication
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="faq-shape">
-        <img src="assets/img/work-visa/faq-shape.html" alt="" />
-        <div
-          class="shape wow fadeInLeft"
-          data-wow-delay="0ms"
-          data-wow-duration=".8s"
-        >
-          <div data-parallax='{"x":30,"y":0}'>
-            <img src="assets/img/work-visa/flan02.html" alt="" />
-          </div>
+        <div data-parallax='{"x":30,"y":0}'>
+          <img src="{% static 'assets/img/work-visa/flan02.html' %}" alt="" />
         </div>
       </div>
     </div>
-  </section>
-  <!-- faq end -->
+
+  </div>
+</section>
+<!-- faq end -->
 </main>
 
 {% endblock content %}

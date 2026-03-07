@@ -2,6 +2,7 @@ from django.shortcuts import render
 from aboutus.models import *
 from slider.models import *
 from django.http import HttpResponse
+from faq.models import Faq
 # Create your views here.
 
 
@@ -16,7 +17,11 @@ def index(request):
 
 
 def faq(request):
-    return render(request, 'faq.html')
+    faqs=Faq.objects.filter(is_active=True).order_by('ordering')
+    context={
+        'faqs': faqs,
+    }
+    return render(request, 'faq.html',context)
 
 def contact(request):
     return render(request, 'contact.html')
