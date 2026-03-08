@@ -15,9 +15,12 @@ def blog(request):
 
 def blog_detail(request, slug):
     blog = Blog.objects.get(slug=slug)
-
+    related_blogs = Blog.objects.filter(
+        is_active=True
+    ).exclude(id=blog.id).order_by('-created_at')[:3]
     context = {
-        'blog': blog
+        'blog': blog,
+        'related_blogs': related_blogs,
     }
 
     return render(request, 'blog_detail.html', context)

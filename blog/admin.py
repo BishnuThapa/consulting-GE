@@ -10,17 +10,6 @@ class SeoInline(admin.TabularInline):
     extra = 1
     max_num=1
 
-
-# @admin.register(Banner)
-# class BannerAdmin(admin.ModelAdmin):
-#     list_display = ['title', 'thumbnail']
-
-#     def thumbnail(self, object):
-#         return format_html('<img src="{}" width="150" height="100" style="border-radius:10%;" />'.format(object.image.url))
-
-    # def has_add_permission(self, request, obj=None):
-    #     return False
-
 @admin.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
     list_display = ['title',
@@ -31,5 +20,10 @@ class BlogAdmin(admin.ModelAdmin):
     }
     inlines = (SeoInline,)
 
-    def thumbnail(self, object):
-        return format_html('<img src="{}" width="100" height="80" style="border-radius:10%;" />'.format(object.image.url))
+    def thumbnail(self, obj):
+        if obj.image:
+            return format_html(
+                '<img src="{}" width="100" style="border-radius:5%;" />',
+                obj.image.url
+            )
+        return "—"

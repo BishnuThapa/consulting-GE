@@ -10,7 +10,6 @@ from imagekit.processors import ResizeToFit, Convert
     
 
 class Blog(models.Model):
-    
     title = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255, unique=True, null=True, blank=True)
     image = models.ImageField(upload_to='blog')
