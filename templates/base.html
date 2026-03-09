@@ -168,6 +168,16 @@
                         </li>
                       </ul>
                     </li>
+                    <li class="menu-item-has-children">
+                      <a href="#!"><span>Services</span></a>
+                      <ul class="submenu">
+                        {% for service in all_services %}
+                        <li>
+                          <a href="{% url 'service-detail' service.slug %}"><span>{{ service.title }}</span></a>
+                        </li>
+                        {% endfor %}
+                      </ul>
+                    </li>
                     <li class="">
                       <a href="{% url 'faq' %}"><span>FAQs</span></a>
                     </li>

@@ -1,7 +1,7 @@
 from settings.models import Favicon, Logo, SiteInfo, SocialLinks, PageBanner
 # from pages.models import *
 # from popup.models import Popup
-# from services.models import Services
+from services.models import Services
 # from clients.models import Client
 
 
@@ -17,7 +17,7 @@ def default(request):
     # pages = Page.objects.all()
     # popups = Popup.objects.first()
 
-    # all_services = Services.objects.all().order_by('ordering')
+    all_services = Services.objects.all().order_by('ordering')
     # clients = Client.objects.all()
     return {
         'favicon': favicon,
@@ -31,6 +31,6 @@ def default(request):
         # 'pages': pages,
         # 'popups': popups,
 
-        # 'all_services': all_services,
+        'all_services': all_services,
         # 'clients': clients,
     }
