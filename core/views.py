@@ -4,25 +4,38 @@ from slider.models import *
 from django.http import HttpResponse
 from faq.models import Faq
 from destination.models import Destination
+from services.models import Services
+from clients.models import Client
+from blog.models import Blog
 # Create your views here.
 
 
 def index(request):
-    slider=Slider.objects.first()
-    about=About.objects.first()
-    context={
+    slider = Slider.objects.first()
+    about = About.objects.first()
+    destinations = Destination.objects.all()  
+    all_services = Services.objects.all()  # get all services for sidebar
+    faqs = Faq.objects.filter(is_active=True).order_by('ordering')
+    universities=Client.objects.all()
+    blogs=Blog.objects.all()
+    context = {
         'slider': slider,
         'about': about,
+        'destinations': destinations,
+        'all_services': all_services,
+        'universities': universities,
+        'faqs': faqs,
+        'blogs': blogs,
     }
-    return render(request, 'index.html',context)
+    return render(request, 'index.html', context)
 
 
 def faq(request):
-    faqs=Faq.objects.filter(is_active=True).order_by('ordering')
-    context={
+    faqs = Faq.objects.filter(is_active=True).order_by('ordering')
+    context = {
         'faqs': faqs,
     }
-    return render(request, 'faq.html',context)
+    return render(request, 'faq.html', context)
 
 
 def destination_detail(request, slug):
@@ -38,7 +51,6 @@ def destination_detail(request, slug):
 
 def contact(request):
     return render(request, 'contact.html')
-
 
 
 # def contact(request):
