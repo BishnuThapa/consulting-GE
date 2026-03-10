@@ -39,63 +39,28 @@
     <div class="container">
       <div class="sec-title style-2 text-center mb-60">
         <span class="sec-title--sub"
-          ><img src="assets/img/icon/h_star.html" alt="" />top institutions<img
-            src="assets/img/icon/h_star.html"
-            alt=""
-        /></span>
+          ><i class="fa-solid fa-star" style="color: rgb(255, 83, 28);"></i>top institutions<i class="fa-solid fa-star" style="color: rgb(255, 83, 28);"></i></span>
       </div>
       <div class="xb-brand xb-brand1 ul_li">
+        {% for uni in universities %}
         <div class="xb-item--item">
           <a class="xb-item--inner" href="#!"
-            ><img src="assets/img/brand/br_01.html" alt=""
+            ><img src="{{ uni.image.url }}" alt="{{ uni.title}}"
           /></a>
         </div>
-        <div class="xb-item--item">
-          <a class="xb-item--inner" href="#!"
-            ><img src="assets/img/brand/br_02.html" alt=""
-          /></a>
-        </div>
-        <div class="xb-item--item">
-          <a class="xb-item--inner" href="#!"
-            ><img src="assets/img/brand/br_03.html" alt=""
-          /></a>
-        </div>
-        <div class="xb-item--item">
-          <a class="xb-item--inner" href="#!"
-            ><img src="assets/img/brand/br_04.html" alt=""
-          /></a>
-        </div>
-        <div class="xb-item--item">
-          <a class="xb-item--inner" href="#!"
-            ><img src="assets/img/brand/br_05.html" alt=""
-          /></a>
-        </div>
-        <div class="xb-item--item">
-          <a class="xb-item--inner" href="#!"
-            ><img src="assets/img/brand/br_06.html" alt=""
-          /></a>
-        </div>
-        <div class="xb-item--item">
-          <a class="xb-item--inner" href="#!"
-            ><img src="assets/img/brand/br_07.html" alt=""
-          /></a>
-        </div>
-        <div class="xb-item--item">
-          <a class="xb-item--inner" href="#!"
-            ><img src="assets/img/brand/br_08.html" alt=""
-          /></a>
-        </div>
+        {% endfor %}
+        
       </div>
     </div>
     <div class="brand-shape">
       <div class="shape shape--1">
         <div class="shape-inner" data-parallax='{"x":-50,"y":-70}'>
-          <img src="assets/img/shape/b_shape1.html" alt="" />
+          <i class="fa-solid fa-star" style="color: rgb(255, 83, 28);"></i>
         </div>
       </div>
       <div class="shape shape--2">
         <div class="shape-inner" data-parallax='{"x":50,"y":80}'>
-          <img src="assets/img/shape/b_shape2.html" alt="" />
+          <i class="fa-solid fa-star" style="color: rgb(255, 83, 28);"></i>
         </div>
       </div>
     </div>
