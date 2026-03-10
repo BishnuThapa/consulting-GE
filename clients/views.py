@@ -3,13 +3,12 @@ from .models import *
 # Create your views here.
 
 
-def client_detail(request, slug):
-
-    single_client = get_object_or_404(Client, slug=slug)
+def university(request):
+    universities=Client.objects.all()
+    
 
     context = {
-        'single_client': single_client,
-
+        'universities': universities,
 
     }
-    return render(request, 'client-detail.html', context)
+    return render(request, 'university.html', context)

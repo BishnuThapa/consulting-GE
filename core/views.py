@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from aboutus.models import *
 from slider.models import *
 from django.http import HttpResponse
 from faq.models import Faq
+from destination.models import Destination
 # Create your views here.
 
 
@@ -23,11 +24,22 @@ def faq(request):
     }
     return render(request, 'faq.html',context)
 
-def contact(request):
-    return render(request, 'contact.html')
+
+def destination_detail(request, slug):
+    single_destination = get_object_or_404(Destination, slug=slug)
+    all_destinations = Destination.objects.all()  # get all destinations for sidebar
+    context = {
+        'single_destination': single_destination,
+        'destinations': all_destinations,  # pass to template
+    }
+
+    return render(request, 'destination-detail.html', context)
+
 
 def contact(request):
     return render(request, 'contact.html')
+
+
 
 # def contact(request):
 #     if request.method == 'POST':

@@ -156,16 +156,14 @@
                     </li>
 
                     <li class="menu-item-has-children">
-                      <a href="#!"><span>Country</span></a>
+                      <a href="#!"><span>Destination</span></a>
                       <ul class="submenu">
+                        {% for dest in destinations %}
                         <li>
-                          <a href="country.html"><span>Country</span></a>
+                          <a href="{% url 'destination_detail' dest.slug %}"><span>{{ dest.title }}</span></a>
                         </li>
-                        <li>
-                          <a href="country-single.html"
-                            ><span>Country Details</span></a
-                          >
-                        </li>
+                        {% endfor %}
+                        
                       </ul>
                     </li>
                     <li class="menu-item-has-children">
@@ -177,6 +175,9 @@
                         </li>
                         {% endfor %}
                       </ul>
+                    </li>
+                    <li>
+                      <a href="{% url 'university'%}"><span>Universities</span></a>
                     </li>
                     <li class="">
                       <a href="{% url 'faq' %}"><span>FAQs</span></a>
