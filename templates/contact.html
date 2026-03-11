@@ -100,13 +100,14 @@ Contact us | Greenearth Education Consultancy
                 </h3>
               </div>
               <form class="xb-item--form contact-from" action="#!">
+                {% csrf_token %}
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="xb-item--field">
                       <span
                         ><img src="assets/img/icon/c_user.html" alt=""
                       /></span>
-                      <input type="text" placeholder="Goladria Gomez" />
+                      <input name="name" type="text" placeholder="Goladria Gomez" />
                     </div>
                   </div>
                   <div class="col-lg-6">
@@ -114,29 +115,24 @@ Contact us | Greenearth Education Consultancy
                       <span
                         ><img src="assets/img/icon/c_mail.html" alt=""
                       /></span>
-                      <input type="text" placeholder="e.visa@services.com" />
+                      <input name="email" type="email" placeholder="e.visa@services.com" />
                     </div>
                   </div>
-                  <div class="col-lg-6">
-                    <div class="xb-item--field">
-                      <span
-                        ><img src="assets/img/icon/c_select.html" alt=""
-                      /></span>
-                      <select name="select" id="nice-select">
-                        <option value="1">Student Visa</option>
-                        <option value="2">Tourist Visa</option>
-                        <option value="3">Commercial Visa</option>
-                        <option value="4">Residence Visa</option>
-                        <option value="4">Working Visa</option>
-                      </select>
-                    </div>
-                  </div>
+                  
                   <div class="col-lg-6">
                     <div class="xb-item--field">
                       <span
                         ><img src="assets/img/icon/c_call.html" alt=""
                       /></span>
-                      <input type="text" placeholder="+888 -8867 3333" />
+                      <input name="phone" type="text" placeholder="+888 -8867 3333" />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="xb-item--field">
+                      <span
+                        ><img src="assets/img/icon/c_mail.html" alt=""
+                      /></span>
+                      <input name="subject" type="text" placeholder="subject" />
                     </div>
                   </div>
                   <div class="col-12">
