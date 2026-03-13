@@ -17,7 +17,7 @@ def index(request):
     all_services = Services.objects.all()  # get all services for sidebar
     faqs = Faq.objects.filter(is_active=True).order_by('ordering')
     universities=Client.objects.all()
-    blogs=Blog.objects.all()
+    blogs=Blog.objects.all().order_by('-created_at')[:3]
     context = {
         'slider': slider,
         'about': about,
