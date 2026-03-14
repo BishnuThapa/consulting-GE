@@ -99,7 +99,15 @@ Contact us | Greenearth Education Consultancy
                   information?
                 </h3>
               </div>
-              <form class="xb-item--form contact-from" action="#!">
+              <form class="xb-item--form contact-from" 
+                id="contact-form"
+              hx-post="{% url 'contact' %}"
+              hx-on="htmx:afterRequest: this.reset()"
+              method="post"
+              hx-target="#inquiry-status"
+              hx-swap="innerHTML"
+              class="form-wrap"
+              >
                 {% csrf_token %}
                 <div class="row">
                   <div class="col-lg-6">
@@ -149,8 +157,11 @@ Contact us | Greenearth Education Consultancy
                       ></textarea>
                     </div>
                   </div>
+                  <!-- ✅ Message response goes here -->
+              <div id="inquiry-status" class="mt-2"></div>
                   <div class="col-12">
                     <button class="thm-btn" type="submit">Send Message</button>
+                    <div id="msgSubmit" class="h3 hidden"></div>
                   </div>
                 </div>
               </form>
@@ -167,4 +178,11 @@ Contact us | Greenearth Education Consultancy
   </section>
   <!-- contact end -->
 </main>
+<script>
+  document.addEventListener("htmx:afterRequest", function (event) {
+    if (event.target.id === "contact-form") {
+      document.getElementById("contact-form").reset();
+    }
+  });
+</script>
 {% endblock content %}
