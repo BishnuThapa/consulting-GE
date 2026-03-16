@@ -77,9 +77,71 @@
       href="{% static 'assets/css/magnific-popup.css' %}"
     />
     <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+    <style>
+      # CSS PART a {
+        text-decoration: none;
+      }
+      .floating_btn {
+        position: fixed;
+        bottom: 30px;
+        right: 100px;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+      }
+
+      @keyframes pulsing {
+        to {
+          box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
+        }
+      }
+
+      .contact_icon {
+        background-color: #42db87;
+        color: #fff;
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+        border-radius: 50px;
+        text-align: center;
+        box-shadow: 2px 2px 3px #999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translatey(0px);
+        animation: pulse 1.5s infinite;
+        box-shadow: 0 0 0 0 #42db87;
+        -webkit-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+        -moz-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+        -ms-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+        animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+        font-weight: normal;
+        font-family: sans-serif;
+        text-decoration: none !important;
+        transition: all 300ms ease-in-out;
+      }
+
+      .text_icon {
+        margin-top: 8px;
+        color: #707070;
+        font-size: 13px;
+      }
+    </style>
   </head>
 
   <body class="citizenship_residency">
+    <div class="floating_btn">
+      <a target="_blank" href="https://api.whatsapp.com/send?phone=9779851036672">
+        <div class="contact_icon">
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+      </a>
+      <p class="text_icon">Talk to us?</p>
+    </div>
     <!-- backtotop - start -->
     <div class="xb-backtotop style-3">
       <a href="#" class="scroll">
@@ -161,10 +223,11 @@
                       <ul class="submenu">
                         {% for dest in destinations %}
                         <li>
-                          <a href="{% url 'destination_detail' dest.slug %}"><span>{{ dest.title }}</span></a>
+                          <a href="{% url 'destination_detail' dest.slug %}"
+                            ><span>{{ dest.title }}</span></a
+                          >
                         </li>
                         {% endfor %}
-                        
                       </ul>
                     </li>
                     <li class="menu-item-has-children">
@@ -172,13 +235,17 @@
                       <ul class="submenu">
                         {% for service in all_services %}
                         <li>
-                          <a href="{% url 'service-detail' service.slug %}"><span>{{ service.title }}</span></a>
+                          <a href="{% url 'service-detail' service.slug %}"
+                            ><span>{{ service.title }}</span></a
+                          >
                         </li>
                         {% endfor %}
                       </ul>
                     </li>
                     <li>
-                      <a href="{% url 'university'%}"><span>Universities</span></a>
+                      <a href="{% url 'university'%}"
+                        ><span>Universities</span></a
+                      >
                     </li>
                     <li class="">
                       <a href="{% url 'faq' %}"><span>FAQs</span></a>
@@ -372,7 +439,11 @@
               <h3 class="widget-title">Destination</h3>
               <ul class="footer__links list-unstyled">
                 {% for dest in destinations %}
-                <li><a href="{% url 'destination_detail' slug=dest.slug %}">{{ dest.title }}</a></li>
+                <li>
+                  <a href="{% url 'destination_detail' slug=dest.slug %}"
+                    >{{ dest.title }}</a
+                  >
+                </li>
                 {% endfor %}
               </ul>
             </div>
@@ -389,18 +460,28 @@
             <div class="footer-newsletter footer__widget mt-40">
               <h3 class="widget-title">Location Map</h3>
               <form action="#" class="footer-newsletter-form">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.8588353570008!2d85.33196207546675!3d27.690757576192077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1938483e13db%3A0x30d90d05ec6016b9!2sGreenEarth%20Education%20Consultancy!5e0!3m2!1sen!2snp!4v1772031098917!5m2!1sen!2snp" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.8588353570008!2d85.33196207546675!3d27.690757576192077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1938483e13db%3A0x30d90d05ec6016b9!2sGreenEarth%20Education%20Consultancy!5e0!3m2!1sen!2snp!4v1772031098917!5m2!1sen!2snp"
+                  width="100%"
+                  height="200"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
               </form>
             </div>
           </div>
           <div class="footer__copyright ul_li_between">
             <div class="footer__copyright-text mt-15">
-              <a href="index.html">Copyright © {% now 'Y' %} GreenEarth Education Consultancy</a> All rights
-              reserved.
+              <a href="index.html"
+                >Copyright © {% now 'Y' %} GreenEarth Education Consultancy</a
+              >
+              All rights reserved.
             </div>
             <ul class="footer__social ul_li_right mt-15">
               <li class="follow-text">Follow us :</li>
-               {% if social_links.facebook_link %}
+              {% if social_links.facebook_link %}
               <li>
                 <a href="{{ social_links.facebook_link }}" target="_blank">
                   <i class="fab fa-facebook-f"></i>
