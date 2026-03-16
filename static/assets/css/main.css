@@ -4075,20 +4075,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
     -moz-border-radius: 76px 0;
     -ms-border-radius: 76px 0;
     -o-border-radius: 76px 0; }
-  .xb-brand1 .xb-item--item::after {
-    position: absolute;
-    content: "\f067";
-    font-family: "Font Awesome 5 Pro";
-    font-weight: 400;
-    right: -4px;
-    bottom: -14px;
-    font-size: 12px;
-    z-index: 2;
-    background: var(--color-gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 0; }
+  
   .xb-brand1 .xb-item--item:nth-child(1)::after, .xb-brand1 .xb-item--item:nth-child(2)::after, .xb-brand1 .xb-item--item:nth-child(3)::after {
     opacity: 1; }
   @media (max-width: 767px) {
