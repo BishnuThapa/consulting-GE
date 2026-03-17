@@ -4,7 +4,14 @@
 Director Message | Greenearth Education Consultancy
 {% endblock title %}
 {% block content %}
-
+<style>
+  .chairman-img{
+  height:500px;
+  width:100%;
+  object-fit:contain;
+  border-radius:50%;
+}
+</style>
 <main>
   <!-- breadcrumb start -->
   <section
@@ -60,7 +67,7 @@ Director Message | Greenearth Education Consultancy
               </h1>
               <div class="xb-item--inner">
                 <div class="xb-item--img">
-                  <img class="rounded" src="{{ chairman_message.featured_image.url }}" height="300" alt="" />
+                  <img class="rounded chairman-img" src="{{ chairman_message.featured_image.url }}" alt="" />
                 </div>
                 
               </div>
